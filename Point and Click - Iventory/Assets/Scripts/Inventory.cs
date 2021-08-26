@@ -5,6 +5,28 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 
 
-    public int[] items;
-    public GameObject[] slots;
+    private Dictionary <string ,NewItems> items = new Dictionary<string ,NewItems>() ;
+    public Dictionary <string ,NewItems >Items{
+        get
+        {
+            return items;
+        }
+    }
+    private int limit = 4;
+    public int Limit{
+        get
+        {
+            return limit;
+        }
+        set
+        {
+            limit = value;
+        }
+    }
+    public GameObject [] slots;
+
+   // public void Awake(){
+   //     slots=GetComponentInChildren<Slot>();
+    //}
+
 }

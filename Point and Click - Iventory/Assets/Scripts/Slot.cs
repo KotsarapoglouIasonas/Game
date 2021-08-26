@@ -6,7 +6,14 @@ public class Slot : MonoBehaviour {
 
 
     private Inventory inventory;
-    public int index;
+    private int index;
+    public int Index{
+        get
+        {
+            return index;
+        }
+    }
+    private NewItems slotItem;
 
     private void Start()
     {
@@ -14,12 +21,15 @@ public class Slot : MonoBehaviour {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (transform.childCount <= 0) {
             inventory.items[index] = 0;
         }
-    }
+    }*/
+    /*public void addItem(NewItems x){
+        slotItem=x;
+    }*/
 
     public void Cross() {
 
