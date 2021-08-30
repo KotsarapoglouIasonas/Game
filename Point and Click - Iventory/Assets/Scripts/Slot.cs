@@ -6,14 +6,13 @@ public class Slot : MonoBehaviour {
 
 
     private Inventory inventory;
-    private int index;
+    [SerializeField] private int index;
     public int Index{
         get
         {
             return index;
         }
     }
-    private NewItems slotItem;
 
     private void Start()
     {
@@ -21,15 +20,12 @@ public class Slot : MonoBehaviour {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
-    /*private void Update()
+    private void Update()
     {
         if (transform.childCount <= 0) {
-            inventory.items[index] = 0;
+            inventory.isFull[index]=false;
         }
-    }*/
-    /*public void addItem(NewItems x){
-        slotItem=x;
-    }*/
+    }
 
     public void Cross() {
 

@@ -5,28 +5,38 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 
 
-    private Dictionary <string ,NewItems> items = new Dictionary<string ,NewItems>() ;
-    public Dictionary <string ,NewItems >Items{
+    private Dictionary <int ,NewItems> items = new Dictionary<int ,NewItems>() ;
+    public Dictionary <int ,NewItems >Items{
         get
         {
             return items;
         }
     }
-    private int limit = 4;
-    public int Limit{
-        get
-        {
-            return limit;
-        }
-        set
-        {
-            limit = value;
-        }
-    }
-    public GameObject [] slots;
+    public Slot [] slots;
+    public bool [] isFull; 
 
-   // public void Awake(){
-   //     slots=GetComponentInChildren<Slot>();
-    //}
+
+   public void Awake(){
+        //slots=GetComponentsInChildren<Slot>();
+    }
+
+    public void addItem(int i,NewItems obj){
+        if (items.ContainsKey(i)){
+            items.Remove(i);
+        }
+        items.Add(i,obj);
+    }
+
+    public int nextAvailable(){
+        for (int i=0; i<slots.Length; i++){
+            if (slots[i].Index==0){
+                return i;
+            }
+        }
+        return 5;
+    }
+
+
+
 
 }

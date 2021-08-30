@@ -377,7 +377,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 834815488}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: Cross
         m_Mode: 1
         m_Arguments:
@@ -1216,6 +1216,30 @@ RectTransform:
   m_AnchoredPosition: {x: 355, y: 338.63504}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &712101986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1962494962737066, guid: 8631987f98aa6e2499e540aa1cff12c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1446246600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &712101991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712101986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: sword
+  inventoryImage: {fileID: 21300000, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300002, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
 --- !u!1 &746080031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1785,30 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.40392157}
   m_EffectDistance: {x: 3.45, y: -3.71}
   m_UseGraphicAlpha: 1
+--- !u!1 &1154748706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1972283162918958, guid: 5aeb03f0a3b959f4dbdebc4439003715,
+    type: 3}
+  m_PrefabInstance: {fileID: 667427338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1154748711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154748706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: sun3
+  inventoryImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
 --- !u!1001 &1232010067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1847,6 +1895,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2551413c5ef80840a0a04a9177bb3a2, type: 3}
+--- !u!1 &1243507472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1954627578700332, guid: c2551413c5ef80840a0a04a9177bb3a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1511928032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1243507477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243507472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: health1
+  inventoryImage: {fileID: 21300008, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300008, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
 --- !u!1 &1262144590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,6 +2134,30 @@ RectTransform:
   m_AnchoredPosition: {x: 355, y: 338.63504}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1369007170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1954627578700332, guid: c2551413c5ef80840a0a04a9177bb3a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 383678389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1369007175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369007170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: health3
+  inventoryImage: {fileID: 21300008, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300008, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
 --- !u!1001 &1446246600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2148,6 +2244,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2551413c5ef80840a0a04a9177bb3a2, type: 3}
+--- !u!1 &1512012504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1972283162918958, guid: 5aeb03f0a3b959f4dbdebc4439003715,
+    type: 3}
+  m_PrefabInstance: {fileID: 490566009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1512012509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512012504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: sun2
+  inventoryImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
+--- !u!1 &1620091982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1972283162918958, guid: 5aeb03f0a3b959f4dbdebc4439003715,
+    type: 3}
+  m_PrefabInstance: {fileID: 1232010067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620091987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620091982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: sun1
+  inventoryImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
+--- !u!1 &1664976666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604164073940054, guid: afbe2eac8642fd24dac6b49439344983,
+    type: 3}
+  m_PrefabInstance: {fileID: 36326009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1664976671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664976666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: beef1
+  inventoryImage: {fileID: 21300004, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300004, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
 --- !u!1001 &1674899340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2194,26 +2362,55 @@ PrefabInstance:
       objectReference: {fileID: 1133557588}
     - target: {fileID: 114562399498541216, guid: 4c74af971bd0f604aac9e74e503f7da7,
         type: 3}
+      propertyPath: isFull.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562399498541216, guid: 4c74af971bd0f604aac9e74e503f7da7,
+        type: 3}
       propertyPath: slots.Array.data[0]
       value: 
-      objectReference: {fileID: 834815484}
+      objectReference: {fileID: 834815488}
     - target: {fileID: 114562399498541216, guid: 4c74af971bd0f604aac9e74e503f7da7,
         type: 3}
       propertyPath: slots.Array.data[1]
       value: 
-      objectReference: {fileID: 275823233}
+      objectReference: {fileID: 275823237}
     - target: {fileID: 114562399498541216, guid: 4c74af971bd0f604aac9e74e503f7da7,
         type: 3}
       propertyPath: slots.Array.data[2]
       value: 
-      objectReference: {fileID: 1262144590}
+      objectReference: {fileID: 1262144594}
     - target: {fileID: 114562399498541216, guid: 4c74af971bd0f604aac9e74e503f7da7,
         type: 3}
       propertyPath: slots.Array.data[3]
       value: 
-      objectReference: {fileID: 1306998200}
+      objectReference: {fileID: 1306998204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c74af971bd0f604aac9e74e503f7da7, type: 3}
+--- !u!1 &1855192117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1954627578700332, guid: c2551413c5ef80840a0a04a9177bb3a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 446457853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1855192122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855192117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: health2
+  inventoryImage: {fileID: 21300008, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300008, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
 --- !u!1 &1957009946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2609,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989920319}
   m_CullTransparentMesh: 1
+--- !u!1 &2013976841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1954627578700332, guid: c2551413c5ef80840a0a04a9177bb3a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1235152341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2013976846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013976841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: health4
+  inventoryImage: {fileID: 21300008, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300008, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
+--- !u!1 &2056434258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604164073940054, guid: afbe2eac8642fd24dac6b49439344983,
+    type: 3}
+  m_PrefabInstance: {fileID: 785979592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2056434263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056434258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: beef2
+  inventoryImage: {fileID: 21300004, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300004, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
 --- !u!1 &2114494690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,3 +2694,27 @@ RectTransform:
   m_AnchoredPosition: {x: 355, y: 338.63504}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2130115237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1972283162918958, guid: 5aeb03f0a3b959f4dbdebc4439003715,
+    type: 3}
+  m_PrefabInstance: {fileID: 1017154828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2130115242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130115237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: sun4
+  inventoryImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  worldImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
