@@ -1806,8 +1806,8 @@ MonoBehaviour:
   itemName: sun3
   inventoryImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
   worldImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
-  canTake: 1
-  canInteract: 0
+  canTake: 0
+  canInteract: 1
   requiredItem: 
 --- !u!1001 &1232010067
 PrefabInstance:
@@ -2715,6 +2715,6 @@ MonoBehaviour:
   itemName: sun4
   inventoryImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
   worldImage: {fileID: 21300006, guid: 2183f75904738814fb98ee9f080f4c20, type: 3}
-  canTake: 1
-  canInteract: 0
-  requiredItem: 
+  canTake: 0
+  canInteract: 1
+  requiredItem: health2
