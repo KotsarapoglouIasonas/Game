@@ -13,12 +13,16 @@ public class Inventory : MonoBehaviour {
             return items;
         }
     }
-    private string activeItem;
+    [SerializeField] private string activeItem;
     public string ActiveItem
     {
         get
         {
             return activeItem;
+        }
+        set
+        {
+            activeItem=value;
         }
     }
     public Slot [] slots;
@@ -26,7 +30,7 @@ public class Inventory : MonoBehaviour {
 
 
    public void Awake()
-   {
+    {
         //slots=GetComponentsInChildren<Slot>();
     }
 

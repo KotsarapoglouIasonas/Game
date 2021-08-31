@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 114474792728251284}
   - component: {fileID: 114550472521511708}
   - component: {fileID: 114062558004102468}
+  - component: {fileID: 5701300583131827928}
   m_Layer: 5
   m_Name: SunButton
   m_TagString: Untagged
@@ -122,9 +123,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114550472521511708}
-        m_TargetAssemblyTypeName: SunItem, Assembly-CSharp
-        m_MethodName: Use
+      - m_Target: {fileID: 5701300583131827928}
+        m_TargetAssemblyTypeName: NewItems, Assembly-CSharp
+        m_MethodName: UseItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -160,3 +161,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1972283162918958, guid: 5aeb03f0a3b959f4dbdebc4439003715, type: 3}
+--- !u!114 &5701300583131827928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210040499704410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  inventoryImage: {fileID: 0}
+  worldImage: {fileID: 0}
+  canTake: 0
+  canInteract: 0
+  requiredItem: 
