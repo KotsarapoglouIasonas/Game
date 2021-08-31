@@ -6,30 +6,45 @@ public class Inventory : MonoBehaviour {
 
 
     private Dictionary <int ,NewItems> items = new Dictionary<int ,NewItems>() ;
-    public Dictionary <int ,NewItems >Items{
+    public Dictionary <int ,NewItems >Items
+    {
         get
         {
             return items;
+        }
+    }
+    private string activeItem;
+    public string ActiveItem
+    {
+        get
+        {
+            return activeItem;
         }
     }
     public Slot [] slots;
     public bool [] isFull; 
 
 
-   public void Awake(){
+   public void Awake()
+   {
         //slots=GetComponentsInChildren<Slot>();
     }
 
-    public void addItem(int i,NewItems obj){
-        if (items.ContainsKey(i)){
+    public void addItem(int i,NewItems obj)
+    {
+        if (items.ContainsKey(i))
+        {
             items.Remove(i);
         }
         items.Add(i,obj);
     }
 
-    public int nextAvailable(){
-        for (int i=0; i<slots.Length; i++){
-            if (slots[i].Index==0){
+    public int nextAvailable()
+    {
+        for (int i=0; i<slots.Length; i++)
+        {
+            if (slots[i].Index==0)
+            {
                 return i;
             }
         }

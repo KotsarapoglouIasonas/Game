@@ -7,7 +7,8 @@ public class Slot : MonoBehaviour {
 
     private Inventory inventory;
     [SerializeField] private int index;
-    public int Index{
+    public int Index
+    {
         get
         {
             return index;
@@ -22,14 +23,17 @@ public class Slot : MonoBehaviour {
 
     private void Update()
     {
-        if (transform.childCount <= 0) {
+        if (transform.childCount <= 0) 
+        {
             inventory.isFull[index]=false;
         }
     }
 
-    public void Cross() {
+    public void Cross() 
+    {
 
-        foreach (Transform child in transform) {
+        foreach (Transform child in transform) 
+        {
             child.GetComponent<Spawn>().SpawnItem();
             GameObject.Destroy(child.gameObject);
         }

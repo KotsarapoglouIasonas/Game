@@ -5,7 +5,8 @@ using UnityEngine;
 public class NewItems : MonoBehaviour
 {
     [SerializeField] private string itemName;
-    public string ItemName{
+    public string ItemName
+    {
         get
         {
             return itemName;
@@ -14,21 +15,24 @@ public class NewItems : MonoBehaviour
     [SerializeField] private Sprite inventoryImage;
     [SerializeField] private Sprite worldImage;
     [SerializeField] private bool canTake;
-    public bool CanTake{
+    public bool CanTake
+    {
         get
         {
             return canTake;
         }
     }
     [SerializeField] private bool canInteract;
-    public bool CanInteract{
+    public bool CanInteract
+    {
         get
         {
             return canInteract;
         }
     }
     [SerializeField] private string requiredItem;
-    public string RequiredItem{
+    public string RequiredItem
+    {
         get
         {
             return requiredItem;
