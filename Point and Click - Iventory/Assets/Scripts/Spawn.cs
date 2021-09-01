@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour {
 
-    private Transform playerPos;
-    //public GameObject item;
+    
+    [SerializeField] private GameObject item;
 
-    private void Start()
-    {
-        playerPos = GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>();
-    }
 
     public void SpawnItem() {
-        //Instantiate(item, playerPos.position, Quaternion.identity);
+        Instantiate(item, transform.position, transform.rotation);
     }
 }
