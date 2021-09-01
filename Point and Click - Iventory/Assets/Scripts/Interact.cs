@@ -15,6 +15,7 @@ public class Interact : MonoBehaviour {
     private void Awake()
     {
         newItem=GetComponent<NewItems>();
+        spawnItem=GetComponent<Spawn>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
