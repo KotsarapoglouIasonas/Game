@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour {
 
     private Transform playerPos;
-    public GameObject item;
+    //public GameObject item;
 
     private void Start()
     {
@@ -13,6 +13,6 @@ public class Spawn : MonoBehaviour {
     }
 
     public void SpawnItem() {
-        Instantiate(item, playerPos.position, Quaternion.identity);
+        //Instantiate(item, playerPos.position, Quaternion.identity);
     }
 }

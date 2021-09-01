@@ -28,14 +28,12 @@ public class Pickup : MonoBehaviour {
                 {
                     inventory.addItem(inventory.nextAvailable(),newItem);
                     inventory.isFull[i]=true;
-                    Instantiate(newItem, transform.position, Quaternion.identity);
-                    //Instantiate(itemButton, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
                     GameObject newButton_GO = Instantiate(itemButton, inventory.slots[i].transform, false);
                     Button newButton=newButton_GO.GetComponent<Button>();
                     newButton.onClick.AddListener(delegate{newItem.UseItem();});
                     Image newButtonImage=newButton_GO.GetComponent<Image>();
                     newButtonImage.sprite=newItem.InventoryImage;
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                     break;
                 }            
             }  
@@ -48,7 +46,10 @@ public class Pickup : MonoBehaviour {
             }
             else
             {
-                Debug.Log(inventory.ActiveItem.ToString());
+                if (inventory.ActiveItem!=newItem.RequiredItem)
+                {
+                    Debug.Log("You need : "+newItem.RequiredItem.ToString()+" If you want to interract with this item");
+                }
                 if (inventory.ActiveItem==newItem.RequiredItem)
                 {
                     Debug.Log("Matched");
