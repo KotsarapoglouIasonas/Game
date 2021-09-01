@@ -5,10 +5,10 @@ using UnityEngine;
 public class Spawn : MonoBehaviour {
 
     
-    [SerializeField] private GameObject item;
+    [SerializeField] private NewItems newitem;
 
 
     public void SpawnItem() {
-        Instantiate(item, transform.position, transform.rotation);
+        Instantiate(newitem, transform.position, transform.rotation);
     }
 }
