@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Animator animator;
-    public Text nameText;
-    public Text dialogueText;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Text nameText;
+    [SerializeField] private Text dialogueText;
     [SerializeField] private Queue<string> sentences;
 
     void Start()
