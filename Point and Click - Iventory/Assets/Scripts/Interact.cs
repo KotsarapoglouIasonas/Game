@@ -10,10 +10,12 @@ public class Interact : MonoBehaviour {
     public GameObject itemButton;
     private NewItems newItem;
     private Spawn spawnItem;
+    private StoryElement element;
 
 
     private void Awake()
     {
+        element=FindObjectOfType<StoryElement>();
         newItem=GetComponent<NewItems>();
         spawnItem=GetComponent<Spawn>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -42,16 +44,20 @@ public class Interact : MonoBehaviour {
         }
         if (newItem.CanInteract==true)
         { 
+            if(newItem.ItemName=="treasure")
+            {
+                element.TriggerDialogue();
+            }
             if (newItem.RequiredItem=="")
             {
                 Debug.Log("Positive");
             }
             else
             {
-                if (inventory.ActiveItem!=newItem.RequiredItem)
+                /*if (inventory.ActiveItem!=newItem.RequiredItem)
                 {
                     Debug.Log("You need : "+newItem.RequiredItem.ToString()+" If you want to interract with this item");
-                }
+                }*/
                 if (inventory.ActiveItem==newItem.RequiredItem)
                 {
                     Debug.Log("Matched");
