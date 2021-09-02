@@ -15,6 +15,7 @@ public class Dialogue
     }
     [TextArea(3,10)]
     [SerializeField] private string[] sentences;
+    [SerializeField] private Sprite[] portraits; 
     public string[] Sentences
     {
         get
