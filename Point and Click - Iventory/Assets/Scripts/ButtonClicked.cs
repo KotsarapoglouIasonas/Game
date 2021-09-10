@@ -7,7 +7,7 @@ using System;
 public class ButtonClicked : MonoBehaviour
 {
     public static event Action<string> ButtonPressed = delegate { };
-    [SerializeField] private string buttonName;
+    private string buttonName;
     private string buttonValue;
     private int deviderPosition;
 

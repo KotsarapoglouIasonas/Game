@@ -72,25 +72,16 @@ public class DigitalDisplay : MonoBehaviour
                     break; 
             }
         }
-      /*  switch (digitEntered)
+        switch (digitEntered)
         {
-            //delete 
-        } */
+            case "reset" :
+                ResetDisplay(0);
+                break;
+            case "ok" :
+                CheckResults();
+                break;
+        } 
         
-        if (codeSequense.Length==3)
-        {
-            if ( characters[0]!=digits[10] )
-            {
-                if ( characters[1]!=digits[10] )
-                {
-                    if ( characters[2]!= digits[10])
-                    {
-                        CheckResults();
-                    }
-                }
-            }
-
-        }
     }
 
     public void DisplayCodeSequence(int digitJustEntered)
@@ -123,21 +114,31 @@ public class DigitalDisplay : MonoBehaviour
         if (codeSequense == success)
         {
             Debug.Log("Congrats! Correct Password");
+            animator.SetBool("LockOpen",false);
+            ResetDisplay(1);
         }
         else
         {
             Debug.Log("Password Incorrect! Try again!");
-            ResetDisplay();
-            animator.SetBool("LockOpen",false);
+            ResetDisplay(0);
         }
     }
-    public void ResetDisplay()
+    public void ResetDisplay(int x)
     {
-        for (int i=0; i<characters.Length; i++)
+        if (x==0)
         {
-            characters[i].sprite=digits[10];
+            ButtonClicked.ButtonPressed -= AddDigitToCodeSequence;
+            ButtonClicked.ButtonPressed -= AddDigitToCodeSequence;
+            ButtonClicked.ButtonPressed -= AddDigitToCodeSequence;
+            StartLock();
         }
-        codeSequense="";
+        if (x==1)
+        {
+            ButtonClicked.ButtonPressed -= AddDigitToCodeSequence;
+            ButtonClicked.ButtonPressed -= AddDigitToCodeSequence;
+            ButtonClicked.ButtonPressed -= AddDigitToCodeSequence;
+        }
+
     }
     public void OnDestroy()
     {
