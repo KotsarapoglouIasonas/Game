@@ -80,6 +80,10 @@ public class DigitalDisplay : MonoBehaviour
             case "ok" :
                 CheckResults();
                 break;
+            case "cross":
+                ResetDisplay(1);
+                animator.SetBool("LockOpen",false);
+                break;
         } 
         
     }
@@ -140,10 +144,10 @@ public class DigitalDisplay : MonoBehaviour
         }
 
     }
-    public void OnDestroy()
+    /*public void OnDestroy()
     {
         ButtonClicked.ButtonPressed -= AddDigitToCodeSequence;
-    }
+    }*/
 
 
 }
