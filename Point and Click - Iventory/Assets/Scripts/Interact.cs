@@ -11,10 +11,12 @@ public class Interact : MonoBehaviour {
     private NewItems newItem;
     private Spawn spawnItem;
     private StoryElement element;
+    private DigitalDisplay display;
 
 
     private void Awake()
     {
+        display=FindObjectOfType<DigitalDisplay>();
         element=FindObjectOfType<StoryElement>();
         newItem=GetComponent<NewItems>();
         spawnItem=GetComponent<Spawn>();
@@ -47,6 +49,10 @@ public class Interact : MonoBehaviour {
             if(newItem.ItemName=="treasure")
             {
                 element.TriggerDialogue();
+            }
+            if(newItem.ItemName=="door")
+            {
+                display.StartLock();
             }
             if (newItem.RequiredItem=="")
             {

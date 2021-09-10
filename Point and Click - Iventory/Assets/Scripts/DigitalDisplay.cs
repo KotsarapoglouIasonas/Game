@@ -10,9 +10,12 @@ public class DigitalDisplay : MonoBehaviour
     [SerializeField] private Image [] characters;
     private string codeSequense;
     [SerializeField] private string success;
+    [SerializeField] private Animator animator;
+  
 
-    void Start()
+    public void StartLock()
     {
+        animator.SetBool("LockOpen",true);
         codeSequense="";
         for (int i=0; i<characters.Length; i++)
         {
@@ -125,6 +128,7 @@ public class DigitalDisplay : MonoBehaviour
         {
             Debug.Log("Password Incorrect! Try again!");
             ResetDisplay();
+            animator.SetBool("LockOpen",false);
         }
     }
     public void ResetDisplay()
