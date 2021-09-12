@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Dialogue 
+[CreateAssetMenu (fileName = "New Dialogue", menuName = "Dialogue")]
+public class Dialogue : ScriptableObject
 {
     [SerializeField] private string objectName;
     public string ObjectName

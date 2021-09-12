@@ -3071,16 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059464e3bbd6380458da707796b69d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    objectName: treasure
-    sentences:
-    - Hello Player!
-    - This is a secret Treasure!
-    - Interact with the treasure using your key and get the coin!
-    portraits:
-    - {fileID: 21300000, guid: a5fcba4eb46d18c4b8834a9bef9b7707, type: 3}
-    - {fileID: 21300000, guid: a5fcba4eb46d18c4b8834a9bef9b7707, type: 3}
-    - {fileID: 21300000, guid: a5fcba4eb46d18c4b8834a9bef9b7707, type: 3}
+  dialogue: {fileID: 11400000, guid: 1d7cf1ffa9ce2b446a4e743ce25a8a40, type: 2}
 --- !u!1001 &1232010067
 PrefabInstance:
   m_ObjectHideFlags: 0
