@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5096091649896533138}
   - component: {fileID: -5547198245637119906}
   - component: {fileID: -9111106903623638112}
-  - component: {fileID: 5470471475345190241}
   - component: {fileID: 9123062471033762915}
+  - component: {fileID: -2752268707139416743}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -101,24 +101,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.2
---- !u!114 &5470471475345190241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3086846761168448414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: door
-  inventoryImage: {fileID: 21300000, guid: 94408ff9f5942b548bbf48fc97ce3a1f, type: 3}
-  worldImage: {fileID: 21300000, guid: 94408ff9f5942b548bbf48fc97ce3a1f, type: 3}
-  canTake: 0
-  canInteract: 1
-  requiredItem: 
 --- !u!114 &9123062471033762915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +115,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4758127042844253268, guid: d29e40616f12f1d45abb419dde02dbd3,
     type: 3}
+--- !u!114 &-2752268707139416743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3086846761168448414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895ed5e86c5002a418a5baf7700594b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: door
+  inventoryImage: {fileID: 21300000, guid: 94408ff9f5942b548bbf48fc97ce3a1f, type: 3}
+  worldImage: {fileID: 21300000, guid: 94408ff9f5942b548bbf48fc97ce3a1f, type: 3}
+  canTake: 0
+  canInteract: 1
+  requiredItem: 

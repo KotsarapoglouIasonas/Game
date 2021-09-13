@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4076178331538397617}
   - component: {fileID: 1008036605139953050}
   - component: {fileID: 1183894923471435288}
-  - component: {fileID: 7395523126794084578}
   - component: {fileID: -5017983741416664254}
+  - component: {fileID: 8699452619668501185}
   m_Layer: 0
   m_Name: key
   m_TagString: Untagged
@@ -101,24 +101,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.525
---- !u!114 &7395523126794084578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874373762587165246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: key
-  inventoryImage: {fileID: 21300000, guid: 57cf3eb3b6bb1d6488925c2a12753259, type: 3}
-  worldImage: {fileID: 21300000, guid: 57cf3eb3b6bb1d6488925c2a12753259, type: 3}
-  canTake: 1
-  canInteract: 0
-  requiredItem: 
 --- !u!114 &-5017983741416664254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +115,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4758127042844253268, guid: d29e40616f12f1d45abb419dde02dbd3,
     type: 3}
+--- !u!114 &8699452619668501185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874373762587165246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cb95e39430c9d4691560291bc53979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: key
+  inventoryImage: {fileID: 21300000, guid: 57cf3eb3b6bb1d6488925c2a12753259, type: 3}
+  worldImage: {fileID: 21300000, guid: 57cf3eb3b6bb1d6488925c2a12753259, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 

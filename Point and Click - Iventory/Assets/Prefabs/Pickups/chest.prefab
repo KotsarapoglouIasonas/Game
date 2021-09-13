@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1091463761182781062}
   - component: {fileID: -621084276501343071}
   - component: {fileID: -384329895348758871}
-  - component: {fileID: -3202285266408417688}
   - component: {fileID: 1486124672439789251}
   - component: {fileID: -3171940681969638308}
+  - component: {fileID: -7434098686177248292}
   m_Layer: 0
   m_Name: chest
   m_TagString: Untagged
@@ -102,24 +102,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
---- !u!114 &-3202285266408417688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3098765097037147286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1579cb87e6bdd4098c499dadf7bc85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: treasure
-  inventoryImage: {fileID: 21300000, guid: ecc73b28d42b88747ac9348fd3efa04b, type: 3}
-  worldImage: {fileID: 21300000, guid: ecc73b28d42b88747ac9348fd3efa04b, type: 3}
-  canTake: 0
-  canInteract: 1
-  requiredItem: key
 --- !u!114 &1486124672439789251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +129,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newitem: {fileID: -334617140911689266, guid: 22e2d6c7143b7734fb1ace55e4947757, type: 3}
+--- !u!114 &-7434098686177248292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3098765097037147286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec9f6023c825c64e942a4a0839eeb19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: treasure
+  inventoryImage: {fileID: 21300000, guid: ecc73b28d42b88747ac9348fd3efa04b, type: 3}
+  worldImage: {fileID: 21300000, guid: ecc73b28d42b88747ac9348fd3efa04b, type: 3}
+  canTake: 0
+  canInteract: 1
+  requiredItem: key
