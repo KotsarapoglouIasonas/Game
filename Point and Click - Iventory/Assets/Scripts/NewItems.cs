@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewItems : MonoBehaviour
+public abstract class NewItems : MonoBehaviour
 {
-    [SerializeField] private string itemName;
+    [SerializeField] protected string itemName;
     public string ItemName
     {
         get
@@ -12,7 +12,7 @@ public class NewItems : MonoBehaviour
             return itemName;
         }
     }
-    [SerializeField] private Sprite inventoryImage;
+    [SerializeField] protected Sprite inventoryImage;
     public Sprite InventoryImage
     {
         get
@@ -20,8 +20,8 @@ public class NewItems : MonoBehaviour
             return inventoryImage;
         }
     }
-    [SerializeField] private Sprite worldImage;
-    [SerializeField] private bool canTake;
+    [SerializeField] protected Sprite worldImage;
+    [SerializeField] protected bool canTake;
     public bool CanTake
     {
         get
@@ -29,7 +29,7 @@ public class NewItems : MonoBehaviour
             return canTake;
         }
     }
-    [SerializeField] private bool canInteract;
+    [SerializeField] protected bool canInteract;
     public bool CanInteract
     {
         get
@@ -37,7 +37,7 @@ public class NewItems : MonoBehaviour
             return canInteract;
         }
     }
-    [SerializeField] private string requiredItem;
+    [SerializeField] protected string requiredItem;
     public string RequiredItem{
         get
         {
@@ -45,7 +45,7 @@ public class NewItems : MonoBehaviour
         }
     }
 
-    private Inventory inventory;
+    protected Inventory inventory;
 
     public void Awake()
     {
@@ -57,5 +57,7 @@ public class NewItems : MonoBehaviour
         inventory.ActiveItem=this.itemName;
         Debug.Log("Holding item changed");
     }
+
+    public abstract void Interaction();
 
 }

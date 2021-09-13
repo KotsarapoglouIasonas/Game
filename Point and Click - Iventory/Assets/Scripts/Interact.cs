@@ -46,33 +46,7 @@ public class Interact : MonoBehaviour {
         }
         if (newItem.CanInteract==true)
         { 
-            if(newItem.ItemName=="treasure")
-            {
-                element.TriggerDialogue();
-            }
-            if(newItem.ItemName=="door")
-            {
-                display.StartLock();
-            }
-            if (newItem.RequiredItem=="")
-            {
-                Debug.Log("Positive");
-            }
-            else
-            {
-                /*if (inventory.ActiveItem!=newItem.RequiredItem)
-                {
-                    Debug.Log("You need : "+newItem.RequiredItem.ToString()+" If you want to interract with this item");
-                }*/
-                if (inventory.ActiveItem==newItem.RequiredItem)
-                {
-                    Debug.Log("Matched");
-                    if (newItem.ItemName=="treasure")
-                    {
-                        spawnItem.SpawnItem();
-                    }
-                }
-            }
+          newItem.Interaction();
         }       
     }
 }
