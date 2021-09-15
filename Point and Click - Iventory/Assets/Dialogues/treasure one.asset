@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: treasure
   sentences:
-  - 'If you want to open the treasure '
-  - you need to have a key
-  - so go find the key and come back again
+  - Hello Player! This is a treasure chest that cointais gold!
+  - In order to open it , you will need a key!
+  - When you find the key, you have to active it by pressing it on your Inventory
+    !
   portraits: []

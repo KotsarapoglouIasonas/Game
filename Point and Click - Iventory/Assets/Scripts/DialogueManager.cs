@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject panel;
     [SerializeField] private Text nameText;
     [SerializeField] private Text dialogueText;
     [SerializeField] private Queue<string> sentences;
 
     void Start()
     {
+        panel.gameObject.SetActive(false);
         sentences=new Queue<string>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("isOpen",true);
+        //animator.SetBool("isOpen",true);
         //Debug.Log("Starting Conversation with : "+dialogue.ObjectName.ToString());
+        panel.SetActive(true);
         nameText.text=dialogue.ObjectName;
         sentences.Clear();
         foreach(string sentence in  dialogue.Sentences)
@@ -53,7 +56,8 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("End of the conversation");
-        animator.SetBool("isOpen",false);
+        panel.SetActive(false);
+        //animator.SetBool("isOpen",false);
     }
 
 }

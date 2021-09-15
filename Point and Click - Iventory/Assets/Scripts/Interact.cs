@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.EventSystems;
 
 public class Interact : MonoBehaviour {
 
@@ -25,28 +26,31 @@ public class Interact : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        if (newItem.CanTake==true)
+        if (!EventSystem.current.IsPointerOverGameObject () )
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
+            if (newItem.CanTake==true)
             {
-            Debug.Log("Enter for loop");          
-                if (inventory.isFull[i]==false)
+                for (int i = 0; i < inventory.slots.Length; i++)
                 {
-                    inventory.addItem(inventory.nextAvailable(),newItem);
-                    inventory.isFull[i]=true;
-                    GameObject newButton_GO = Instantiate(itemButton, inventory.slots[i].transform, false);
-                    Button newButton=newButton_GO.GetComponent<Button>();
-                    newButton.onClick.AddListener(delegate{newItem.UseItem();});
-                    Image newButtonImage=newButton_GO.GetComponent<Image>();
-                    newButtonImage.sprite=newItem.InventoryImage;
-                    gameObject.SetActive(false);
-                    break;
-                }            
-            }  
-        }
-        if (newItem.CanInteract==true)
-        { 
-          newItem.Interaction();
+                Debug.Log("Enter for loop");          
+                    if (inventory.isFull[i]==false)
+                    {
+                        inventory.addItem(inventory.nextAvailable(),newItem);
+                        inventory.isFull[i]=true;
+                        GameObject newButton_GO = Instantiate(itemButton, inventory.slots[i].transform, false);
+                        Button newButton=newButton_GO.GetComponent<Button>();
+                        newButton.onClick.AddListener(delegate{newItem.UseItem();});
+                        Image newButtonImage=newButton_GO.GetComponent<Image>();
+                        newButtonImage.sprite=newItem.InventoryImage;
+                        gameObject.SetActive(false);
+                        break;
+                    }            
+                }  
+            }
+            if (newItem.CanInteract==true)
+            { 
+            newItem.Interaction();
+            }
         }       
     }
 }

@@ -7,7 +7,7 @@ public class Treasure : NewItems
     private StoryElement element;
     private Spawn spawnItem;
 
-    public void Awake()
+    public override void Awake()
     {
         element = FindObjectOfType<StoryElement>();
         spawnItem = GetComponent<Spawn>();
@@ -16,11 +16,14 @@ public class Treasure : NewItems
 
     public override void Interaction()
     {
-        element.TriggerDialogue();
         if (inventory.ActiveItem==requiredItem)
         {
             Debug.Log("Matched");
             spawnItem.SpawnItem();
+        }
+        else
+        {
+            element.TriggerDialogue();
         }
     }
 }

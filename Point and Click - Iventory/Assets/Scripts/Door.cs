@@ -6,7 +6,7 @@ public class Door : NewItems
 {
     private DigitalDisplay display;
 
-    public void Awake()
+    public override void Awake()
     {
         display=FindObjectOfType<DigitalDisplay>();
     }

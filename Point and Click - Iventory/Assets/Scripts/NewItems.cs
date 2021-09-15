@@ -47,12 +47,12 @@ public abstract class NewItems : MonoBehaviour
 
     protected Inventory inventory;
 
-    public void Awake()
+    public virtual void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
     
-    public void UseItem()
+    public virtual void UseItem()
     {
         inventory.ActiveItem=this.itemName;
         Debug.Log("Holding item changed");
