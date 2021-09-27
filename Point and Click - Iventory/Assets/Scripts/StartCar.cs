@@ -9,9 +9,12 @@ public class StartCar : MonoBehaviour
 {   
     [SerializeField] private GameObject miniMap;
     [SerializeField] private GameObject fullMap;
+    private GameObject newScene;
+    private LoadScene loadscene;
 
     void Start()
     {
+        loadscene=FindObjectOfType<LoadScene>();
         miniMap.gameObject.SetActive(false);
         fullMap.gameObject.SetActive(false);
     }
@@ -23,6 +26,17 @@ public class StartCar : MonoBehaviour
 
     public void ShowMap()
     {
+        for (int i=0; i<loadscene.AvailableScenes.Count; i++)
+        {
+            newScene = Instantiate(loadscene.PrefabScene,fullMap.transform,false);
+            newScene.GetComponent<Text>().text=(loadscene.AvailableScenes[i]).ToString();
+            Debug.Log("Prefab added");
+        }
         fullMap.gameObject.SetActive(true);
+    }
+
+    public void TaskOnClick(){
+        string scene = GetComponent<Text>().text;
+        loadscene.LoadScenes(scene);
     }
 }

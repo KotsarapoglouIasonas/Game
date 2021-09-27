@@ -4,29 +4,37 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class LoadScene : MonoBehaviour
 {
-    private GameObject scene;
-    [SerializeField] private Button[] buttons;
-
-    void Start()
-    {   
-        scene = GetComponent<GameObject>();
-    }
-
-    public void LoadingSceneOne(){
-        if (buttons[0].interactable == true)
-        {
-            SceneManager.LoadScene("Game");
-        }
-    }
-
-    public void LoadingSceneTwo()
+    [SerializeField] private List<string> availableScenes;
+    public List<string> AvailableScenes
     {
-        if (buttons[1].interactable == true)
+        get
         {
-            SceneManager.LoadScene("omg");
+            return availableScenes;
         }
+    }
+    [SerializeField] private GameObject prefabScene;
+    public GameObject PrefabScene
+    {
+        get
+        {
+            return prefabScene;
+        }
+    }
+    private Button btn;
+
+
+    public void LoadScenes(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
+    }
+
+
+    public void AddScene(string scene)
+    {
+        availableScenes.Add(scene);
     }
 
 }
