@@ -29,14 +29,15 @@ public class StartCar : MonoBehaviour
         for (int i=0; i<loadscene.AvailableScenes.Count; i++)
         {
             newScene = Instantiate(loadscene.PrefabScene,fullMap.transform,false);
-            newScene.GetComponent<Text>().text=(loadscene.AvailableScenes[i]).ToString();
+            newScene.GetComponent<Text>().text=(loadscene.AvailableScenes[i]);
+            string scene = loadscene.AvailableScenes[i];
+            newScene.GetComponent<Button>().onClick.AddListener(delegate{TaskOnClick(scene);});
             Debug.Log("Prefab added");
         }
         fullMap.gameObject.SetActive(true);
     }
 
-    public void TaskOnClick(){
-        string scene = GetComponent<Text>().text;
+    public void TaskOnClick(string scene){
         loadscene.LoadScenes(scene);
     }
 }
