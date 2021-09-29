@@ -7,6 +7,12 @@ public class Bag : MonoBehaviour {
     bool isClosed;
     public GameObject bag;
 
+    void Start()
+    {
+        bag.SetActive(false);
+        isClosed = true;
+    }
+
     public void OpenCloseBag() {
         if (isClosed == true)
         {

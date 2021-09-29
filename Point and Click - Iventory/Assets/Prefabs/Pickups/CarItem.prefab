@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3098765097037147286
+--- !u!1 &4060310854723979590
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1091463761182781062}
-  - component: {fileID: -621084276501343071}
-  - component: {fileID: -384329895348758871}
-  - component: {fileID: 1486124672439789251}
-  - component: {fileID: -3171940681969638308}
-  - component: {fileID: -7434098686177248292}
+  - component: {fileID: 5863233797960915472}
+  - component: {fileID: -2082944595941899496}
+  - component: {fileID: -8298484022342326315}
+  - component: {fileID: -2258173730807255092}
+  - component: {fileID: 6483327143192103814}
   m_Layer: 0
-  m_Name: chest
-  m_TagString: Untagged
+  m_Name: CarItem
+  m_TagString: CarItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1091463761182781062
+--- !u!4 &5863233797960915472
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3098765097037147286}
+  m_GameObject: {fileID: 4060310854723979590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,13 +34,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &-621084276501343071
+--- !u!58 &-2082944595941899496
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4060310854723979590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!212 &-8298484022342326315
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3098765097037147286}
+  m_GameObject: {fileID: 4060310854723979590}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,40 +90,42 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ecc73b28d42b88747ac9348fd3efa04b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 000c709b4be60f7429d3231546126afb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 5.33, y: 4.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-384329895348758871
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3098765097037147286}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.56
---- !u!114 &1486124672439789251
+--- !u!114 &-2258173730807255092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3098765097037147286}
+  m_GameObject: {fileID: 4060310854723979590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cb95e39430c9d4691560291bc53979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: car1
+  inventoryImage: {fileID: 21300000, guid: 000c709b4be60f7429d3231546126afb, type: 3}
+  worldImage: {fileID: 21300000, guid: 000c709b4be60f7429d3231546126afb, type: 3}
+  canTake: 1
+  canInteract: 0
+  requiredItem: 
+--- !u!114 &6483327143192103814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4060310854723979590}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94ba07c79ec7fdf4c8defbc9b19ea8a3, type: 3}
@@ -116,34 +133,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4758127042844253268, guid: d29e40616f12f1d45abb419dde02dbd3,
     type: 3}
---- !u!114 &-3171940681969638308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3098765097037147286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e0952744d973247824b8a41b1ae32b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newitem: {fileID: 851353951123043111, guid: 22e2d6c7143b7734fb1ace55e4947757, type: 3}
---- !u!114 &-7434098686177248292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3098765097037147286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fec9f6023c825c64e942a4a0839eeb19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: treasure
-  inventoryImage: {fileID: 21300000, guid: ecc73b28d42b88747ac9348fd3efa04b, type: 3}
-  worldImage: {fileID: 21300000, guid: ecc73b28d42b88747ac9348fd3efa04b, type: 3}
-  canTake: 0
-  canInteract: 1
-  requiredItem: key

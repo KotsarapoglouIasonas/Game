@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerPos
   - Blocker
+  - InventoryLoad
+  - CarItem
   layers:
   - Default
   - TransparentFX

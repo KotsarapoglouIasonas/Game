@@ -25,14 +25,30 @@ public class Inventory : MonoBehaviour {
             activeItem=value;
         }
     }
+    [SerializeField] private List <string>  CarItems;
+    [SerializeField] private List <GameObject> SceneCarItems;
     public Slot [] slots;
     public bool [] isFull; 
 
-
-   public void Awake()
+    void Start()
     {
-        //slots=GetComponentsInChildren<Slot>();
+        for (int i=0; i<SceneCarItems.Count; i++)
+        {
+            SceneCarItems[i].SetActive(false);
+        }
+        for (int i=0; i<CarItems.Count; i++)
+        {
+            for (int j=0; j<SceneCarItems.Count; j++)
+            {
+                if (CarItems[i] == SceneCarItems[i].name)
+                {
+                    //SceneCarItems[i].SetActive(true);
+                }
+            }
+        }
     }
+
+
 
     public void addItem(int i,NewItems obj)
     {
@@ -53,6 +69,11 @@ public class Inventory : MonoBehaviour {
             }
         }
         return 5;
+    }
+
+    public void AddToCar(string obj)
+    {
+        CarItems.Add(obj);
     }
 
 

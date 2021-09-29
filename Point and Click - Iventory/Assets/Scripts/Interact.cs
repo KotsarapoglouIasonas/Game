@@ -31,10 +31,12 @@ public class Interact : MonoBehaviour {
             if (newItem.CanTake==true)
             {
                 for (int i = 0; i < inventory.slots.Length; i++)
-                {
-                Debug.Log("Enter for loop");          
+                {         
                     if (inventory.isFull[i]==false)
-                    {
+                    {   if( newItem.tag == "CarItem")
+                        {
+                            inventory.AddToCar(newItem.ItemName);
+                        }
                         inventory.addItem(inventory.nextAvailable(),newItem);
                         inventory.isFull[i]=true;
                         GameObject newButton_GO = Instantiate(itemButton, inventory.slots[i].transform, false);
