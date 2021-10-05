@@ -26,6 +26,13 @@ public class Inventory : MonoBehaviour {
         }
     }
     [SerializeField] private List <string>  CarItems;
+    public List <string> CarrItems
+    {
+        get
+        {
+            return CarItems;
+        }
+    }
     [SerializeField] private List <GameObject> SceneCarItems;
     public Slot [] slots;
     public bool [] isFull; 
