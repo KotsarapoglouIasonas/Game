@@ -13,6 +13,14 @@ public class Inventory : MonoBehaviour {
             return items;
         }
     }
+    private Dictionary <string ,string> keys = new Dictionary<string ,string>();
+    public Dictionary <string, string> Keys
+    {
+        get
+        {
+            return keys;
+        }
+    }
     [SerializeField] private string activeItem;
     public string ActiveItem
     {
@@ -53,6 +61,9 @@ public class Inventory : MonoBehaviour {
                 }
             }
         }
+        keys.Add("aioliki-book","ΚΙΜΙΝΤΕΝΙΑ");
+        keys.Add("galini-book","ΑΝΑΒΥΣΣΟΣ");
+        keys.Add("slingshot","ΚΙΤΡΙΝΟ");
     }
 
 

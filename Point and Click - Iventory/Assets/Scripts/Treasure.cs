@@ -11,12 +11,12 @@ public class Treasure : NewItems
     {
         element = FindObjectOfType<StoryElement>();
         spawnItem = GetComponent<Spawn>();
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     public override void Interaction()
     {
-        if (inventory.ActiveItem==requiredItem)
+        /*if (inventory.ActiveItem==requiredItem)
         {
             Debug.Log("Matched");
             spawnItem.SpawnItem();
@@ -24,6 +24,7 @@ public class Treasure : NewItems
         else
         {
             element.TriggerDialogue();
-        }
+        }*/
+        element.TriggerDialogue();
     }
 }

@@ -15,12 +15,19 @@ public class Dialogue : ScriptableObject
     }
     [TextArea(3,10)]
     [SerializeField] private string[] sentences;
-    [SerializeField] private Sprite[] portraits; 
     public string[] Sentences
     {
         get
         {
             return sentences;
+        }
+    }
+    [SerializeField] private string[] names; 
+    public string[] Names
+    {
+        get
+        {
+            return names;
         }
     }
 

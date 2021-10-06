@@ -11,31 +11,39 @@ public class Interact : MonoBehaviour {
     public GameObject itemButton;
     private NewItems newItem;
     private Spawn spawnItem;
-    private StoryElement element;
     private DigitalDisplay display;
+    private LoadScene loadscene;
 
 
     private void Awake()
     {
         display=FindObjectOfType<DigitalDisplay>();
-        element=FindObjectOfType<StoryElement>();
         newItem=GetComponent<NewItems>();
         spawnItem=GetComponent<Spawn>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        loadscene = GameObject.FindGameObjectWithTag("Player").GetComponent<LoadScene>();
     }
 
     private void OnMouseDown()
     {
         if (!EventSystem.current.IsPointerOverGameObject () )
         {
+            if (newItem.CanInteract==true)
+            { 
+            newItem.Interaction();
+            }
             if (newItem.CanTake==true)
             {
                 for (int i = 0; i < inventory.slots.Length; i++)
                 {         
                     if (inventory.isFull[i]==false)
-                    {   if( newItem.tag == "CarItem")
+                    {   if (newItem.tag == "CarItem")
                         {
                             inventory.AddToCar(newItem.ItemName);
+                        }
+                        if (inventory.Keys.ContainsKey(newItem.ItemName))
+                        {
+                            loadscene.AddScene(inventory.Keys[newItem.ItemName]);
                         }
                         inventory.addItem(inventory.nextAvailable(),newItem);
                         inventory.isFull[i]=true;
@@ -48,10 +56,6 @@ public class Interact : MonoBehaviour {
                         break;
                     }            
                 }  
-            }
-            if (newItem.CanInteract==true)
-            { 
-            newItem.Interaction();
             }
         }       
     }
