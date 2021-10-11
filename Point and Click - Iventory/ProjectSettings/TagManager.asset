@@ -8,6 +8,7 @@ TagManager:
   - Blocker
   - InventoryLoad
   - CarItem
+  - key
   layers:
   - Default
   - TransparentFX

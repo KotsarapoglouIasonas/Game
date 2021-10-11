@@ -205,7 +205,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2258173730807255092, guid: 2cae6856d0c45044fa49718a13baccae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2cae6856d0c45044fa49718a13baccae, type: 3}
 --- !u!1001 &85869945
 PrefabInstance:
@@ -217,7 +218,7 @@ PrefabInstance:
     - target: {fileID: -1603668991953479781, guid: 543829647f4426b4087221928da15815,
         type: 3}
       propertyPath: canTake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1603668991953479781, guid: 543829647f4426b4087221928da15815,
         type: 3}
@@ -245,6 +246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Slingshot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269538241905518339, guid: 543829647f4426b4087221928da15815,
+        type: 3}
+      propertyPath: m_TagString
+      value: key
       objectReference: {fileID: 0}
     - target: {fileID: 2541606036018315058, guid: 543829647f4426b4087221928da15815,
         type: 3}
@@ -921,6 +927,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 1255d555eae5e9c468532e1f823da912, type: 2}
+--- !u!114 &1077630783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077630781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec9f6023c825c64e942a4a0839eeb19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: aivali-car
+  inventoryImage: {fileID: 21300000, guid: 1d5af57e6b5bf7a4790492b236d569f8, type: 3}
+  worldImage: {fileID: 21300000, guid: 1d5af57e6b5bf7a4790492b236d569f8, type: 3}
+  canTake: 0
+  canInteract: 1
+  requiredItem: 
+--- !u!114 &1077630784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077630781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e0952744d973247824b8a41b1ae32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newitem: {fileID: 2339276301809596375, guid: ce2c24b1babdbde4fb20b71795ccf105, type: 3}
 --- !u!1 &1113570948
 GameObject:
   m_ObjectHideFlags: 0

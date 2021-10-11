@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4060310854723979590
+--- !u!1 &2103927294925227210
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5863233797960915472}
-  - component: {fileID: -2082944595941899496}
-  - component: {fileID: -8298484022342326315}
-  - component: {fileID: -2258173730807255092}
-  - component: {fileID: 6483327143192103814}
+  - component: {fileID: 2057822924645654740}
+  - component: {fileID: -7119315199575355157}
+  - component: {fileID: -7350365921883657339}
+  - component: {fileID: 1794835867670389930}
+  - component: {fileID: -3691461058195276290}
+  - component: {fileID: -3597186543369563610}
   m_Layer: 0
-  m_Name: CarItem
-  m_TagString: CarItem
+  m_Name: baoulo
+  m_TagString: key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5863233797960915472
+--- !u!4 &2057822924645654740
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
+  m_GameObject: {fileID: 2103927294925227210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,29 +35,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &-2082944595941899496
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!212 &-8298484022342326315
+--- !u!212 &-7119315199575355157
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
+  m_GameObject: {fileID: 2103927294925227210}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -95,37 +80,66 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.33, y: 4.68}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2258173730807255092
+--- !u!58 &-7350365921883657339
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103927294925227210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.4
+--- !u!114 &1794835867670389930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
+  m_GameObject: {fileID: 2103927294925227210}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4cb95e39430c9d4691560291bc53979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: aivali-car
-  inventoryImage: {fileID: 21300000, guid: 000c709b4be60f7429d3231546126afb, type: 3}
-  worldImage: {fileID: 21300000, guid: 000c709b4be60f7429d3231546126afb, type: 3}
+  itemName: baoulo
+  inventoryImage: {fileID: 21300000, guid: 1d5af57e6b5bf7a4790492b236d569f8, type: 3}
+  worldImage: {fileID: 21300000, guid: 1d5af57e6b5bf7a4790492b236d569f8, type: 3}
   canTake: 1
   canInteract: 1
   requiredItem: 
---- !u!114 &6483327143192103814
+--- !u!114 &-3691461058195276290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
+  m_GameObject: {fileID: 2103927294925227210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059464e3bbd6380458da707796b69d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: d7126954dfe45dd4eb3b199aae006ce5, type: 2}
+--- !u!114 &-3597186543369563610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103927294925227210}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94ba07c79ec7fdf4c8defbc9b19ea8a3, type: 3}

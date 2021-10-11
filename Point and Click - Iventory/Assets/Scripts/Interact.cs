@@ -13,6 +13,7 @@ public class Interact : MonoBehaviour {
     private Spawn spawnItem;
     private DigitalDisplay display;
     private LoadScene loadscene;
+    private StoryElement element;
 
 
     private void Awake()
@@ -25,12 +26,20 @@ public class Interact : MonoBehaviour {
     }
 
     private void OnMouseDown()
-    {
+    {   
+
+
+        
         if (!EventSystem.current.IsPointerOverGameObject () )
         {
+            if (newItem.GetComponent<StoryElement>()!=null)
+            {
+                element = newItem.GetComponent<StoryElement>();
+            }
             if (newItem.CanInteract==true)
-            { 
-            newItem.Interaction();
+            {
+                inventory.AddDialogue(element.Gdialogue); 
+                newItem.Interaction();
             }
             if (newItem.CanTake==true)
             {
@@ -45,15 +54,18 @@ public class Interact : MonoBehaviour {
                         {
                             loadscene.AddScene(inventory.Keys[newItem.ItemName]);
                         }
-                        inventory.addItem(inventory.nextAvailable(),newItem);
-                        inventory.isFull[i]=true;
-                        GameObject newButton_GO = Instantiate(itemButton, inventory.slots[i].transform, false);
-                        Button newButton=newButton_GO.GetComponent<Button>();
-                        newButton.onClick.AddListener(delegate{newItem.UseItem();});
-                        Image newButtonImage=newButton_GO.GetComponent<Image>();
-                        newButtonImage.sprite=newItem.InventoryImage;
-                        gameObject.SetActive(false);
-                        break;
+                        if (newItem.tag == "key")
+                        {
+                            inventory.addItem(inventory.nextAvailable(),newItem);
+                            inventory.isFull[i]=true;
+                            GameObject newButton_GO = Instantiate(itemButton, inventory.slots[i].transform, false);
+                            Button newButton=newButton_GO.GetComponent<Button>();
+                            newButton.onClick.AddListener(delegate{newItem.UseItem();});
+                            Image newButtonImage=newButton_GO.GetComponent<Image>();
+                            newButtonImage.sprite=newItem.InventoryImage;
+                            gameObject.SetActive(false);
+                            break;
+                        }
                     }            
                 }  
             }

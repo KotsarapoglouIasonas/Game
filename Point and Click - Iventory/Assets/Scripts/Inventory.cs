@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour {
             return keys;
         }
     }
+    [SerializeField] private List <Dialogue> Dialogues;
     [SerializeField] private string activeItem;
     public string ActiveItem
     {
@@ -92,6 +93,11 @@ public class Inventory : MonoBehaviour {
     public void AddToCar(string obj)
     {
         CarItems.Add(obj);
+    }
+
+    public void AddDialogue(Dialogue dialogue)
+    {
+        Dialogues.Add(dialogue);
     }
 
 

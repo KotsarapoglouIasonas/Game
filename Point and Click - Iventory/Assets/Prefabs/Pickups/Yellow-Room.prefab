@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4060310854723979590
+--- !u!1 &7670173438895366726
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5863233797960915472}
-  - component: {fileID: -2082944595941899496}
-  - component: {fileID: -8298484022342326315}
-  - component: {fileID: -2258173730807255092}
-  - component: {fileID: 6483327143192103814}
+  - component: {fileID: 8499962148635648937}
+  - component: {fileID: 2210766997103175235}
+  - component: {fileID: -2791123539256478968}
+  - component: {fileID: -75008796707100845}
+  - component: {fileID: -5668427056106377034}
+  - component: {fileID: 5670654308532506069}
+  - component: {fileID: -4637670247987941293}
   m_Layer: 0
-  m_Name: CarItem
-  m_TagString: CarItem
+  m_Name: Yellow-Room
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5863233797960915472
+--- !u!4 &8499962148635648937
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
+  m_GameObject: {fileID: 7670173438895366726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,29 +36,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &-2082944595941899496
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!212 &-8298484022342326315
+--- !u!212 &2210766997103175235
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
+  m_GameObject: {fileID: 7670173438895366726}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -90,42 +76,72 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 1d5af57e6b5bf7a4790492b236d569f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02036d3cd07055e4b992119e270ef319, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.33, y: 4.68}
+  m_Size: {x: 1.45, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2258173730807255092
+--- !u!58 &-2791123539256478968
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7670173438895366726}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.25
+--- !u!114 &-75008796707100845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
+  m_GameObject: {fileID: 7670173438895366726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4cb95e39430c9d4691560291bc53979, type: 3}
+  m_Script: {fileID: 11500000, guid: fec9f6023c825c64e942a4a0839eeb19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: aivali-car
-  inventoryImage: {fileID: 21300000, guid: 000c709b4be60f7429d3231546126afb, type: 3}
-  worldImage: {fileID: 21300000, guid: 000c709b4be60f7429d3231546126afb, type: 3}
-  canTake: 1
+  itemName: Yellow
+  inventoryImage: {fileID: 21300000, guid: 02036d3cd07055e4b992119e270ef319, type: 3}
+  worldImage: {fileID: 21300000, guid: 02036d3cd07055e4b992119e270ef319, type: 3}
+  canTake: 0
   canInteract: 1
   requiredItem: 
---- !u!114 &6483327143192103814
+--- !u!114 &-5668427056106377034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4060310854723979590}
+  m_GameObject: {fileID: 7670173438895366726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e0952744d973247824b8a41b1ae32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newitem: {fileID: -2258173730807255092, guid: 2cae6856d0c45044fa49718a13baccae,
+    type: 3}
+--- !u!114 &5670654308532506069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7670173438895366726}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94ba07c79ec7fdf4c8defbc9b19ea8a3, type: 3}
@@ -133,3 +149,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4758127042844253268, guid: d29e40616f12f1d45abb419dde02dbd3,
     type: 3}
+--- !u!114 &-4637670247987941293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7670173438895366726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059464e3bbd6380458da707796b69d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: a355dc9b36c978d429c853fbe5320c5f, type: 2}

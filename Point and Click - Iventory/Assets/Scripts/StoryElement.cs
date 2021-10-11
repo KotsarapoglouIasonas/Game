@@ -5,6 +5,13 @@ using UnityEngine;
 public class StoryElement : MonoBehaviour
 {
     [SerializeField] private Dialogue dialogue;
+    public Dialogue Gdialogue
+    {
+        get
+        {
+            return dialogue;
+        }
+    }
 
     public void TriggerDialogue()
     {

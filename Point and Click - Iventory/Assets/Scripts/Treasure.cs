@@ -9,22 +9,24 @@ public class Treasure : NewItems
 
     public override void Awake()
     {
-        element = FindObjectOfType<StoryElement>();
+        element = GetComponent<StoryElement>();
         spawnItem = GetComponent<Spawn>();
-        //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     public override void Interaction()
     {
-        /*if (inventory.ActiveItem==requiredItem)
+        if (requiredItem!="")
         {
-            Debug.Log("Matched");
-            spawnItem.SpawnItem();
+            if (inventory.ActiveItem==requiredItem)
+            {
+                spawnItem.SpawnItem();
+            }
         }
         else
         {
+            spawnItem.SpawnItem();
             element.TriggerDialogue();
-        }*/
-        element.TriggerDialogue();
+        }
     }
 }
