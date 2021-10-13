@@ -14,4 +14,9 @@ public class Door : NewItems
     public override void Interaction(){
         display.StartLock();
     }
+    public override void UseItem()
+    {
+        inventory.ActiveItem=this.itemName;
+        Debug.Log("Holding item changed");
+    }
 }

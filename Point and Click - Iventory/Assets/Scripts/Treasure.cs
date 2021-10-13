@@ -16,17 +16,53 @@ public class Treasure : NewItems
 
     public override void Interaction()
     {
+        for (int i=0; i<inventory.Items.Count; i++)
+        {
+            if (inventory.Items[i] == spawnItem)
+            {
+                spawnItem=null;
+                break;
+            }
+        }
         if (requiredItem!="")
         {
             if (inventory.ActiveItem==requiredItem)
             {
+                element.TriggerDialogue();
                 spawnItem.SpawnItem();
+            }
+            else
+            {
+                bool exist=false;
+                for (int i=0; i<inventory.Items.Count; i++)
+                {
+                    if (inventory.Items[i].ItemName == requiredItem)
+                    {
+                        exist=true;
+                    }
+                }
+                if (exist==true)
+                {
+                    Debug.Log("Please put : "+RequiredItem+" in your hand! By clicking on it ");
+                }
+                else
+                {
+                    Debug.Log("You dont have the required item to open it!");
+                }
             }
         }
         else
         {
-            spawnItem.SpawnItem();
             element.TriggerDialogue();
+            spawnItem.SpawnItem();
         }
+        
     }
+
+    public override void UseItem()
+    {
+        inventory.ActiveItem=this.itemName;
+        Debug.Log("Holding item changed");
+    }
+
 }

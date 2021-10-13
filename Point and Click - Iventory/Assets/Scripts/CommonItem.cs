@@ -5,9 +5,11 @@ using UnityEngine;
 public class CommonItem : NewItems
 {
     private StoryElement element;
+    private Inventory inventory;
 
     public override void Awake()
     {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         element = GetComponent<StoryElement>();
     } 
 
@@ -17,5 +19,11 @@ public class CommonItem : NewItems
             Debug.Log("Positive");
             element.TriggerDialogue();
         }
+    }
+
+    public override void UseItem()
+    {
+        inventory.ActiveItem=this.itemName;
+        Debug.Log("Holding item changed");
     }
 }

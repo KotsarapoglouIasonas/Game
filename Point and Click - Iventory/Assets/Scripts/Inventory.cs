@@ -97,7 +97,14 @@ public class Inventory : MonoBehaviour {
 
     public void AddDialogue(Dialogue dialogue)
     {
-        Dialogues.Add(dialogue);
+        if (Dialogues.Contains(dialogue))
+        {
+            Debug.Log("This diaologue already exist in recording list!");
+        }
+        else
+        {
+            Dialogues.Add(dialogue);
+        }
     }
 
 

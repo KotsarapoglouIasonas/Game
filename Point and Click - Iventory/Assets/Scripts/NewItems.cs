@@ -52,11 +52,7 @@ public abstract class NewItems : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
     
-    public virtual void UseItem()
-    {
-        inventory.ActiveItem=this.itemName;
-        Debug.Log("Holding item changed");
-    }
+    public abstract void UseItem();
 
     public abstract void Interaction();
 
