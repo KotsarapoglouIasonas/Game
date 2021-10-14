@@ -7,12 +7,13 @@ public class SceneState
 {
     public string [] items;
     public bool [] itemsState;
-    public string [] carItems;
+    public string namescene;
 
-    public SceneState(List <string> _items, bool [] _itemsState, List <string>  _carItems)
+
+    public SceneState(string [] _items, bool [] _itemsState,string name)
     {
-        items = new string[_items.Count];
-        for (int i=0; i<_items.Count; i++)
+        items = new string[_items.Length];
+        for (int i=0; i<_items.Length; i++)
         {
             items[i]=_items[i];
         }
@@ -21,10 +22,6 @@ public class SceneState
         {
             itemsState[i]=_itemsState[i];
         }
-        carItems = new string[_carItems.Count];
-        for (int i=0; i<_carItems.Count; i++)
-        {
-            carItems[i]=_carItems[i];
-        }
+        namescene = name;
     }
 }
